@@ -79,15 +79,15 @@
     </div>
 </div>
 
-<script src="assets/plugins/jquery.min.js" type="text/javascript"></script>
-<script src="assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<script src={{asset("assets/plugins/jquery.min.js")}} type="text/javascript"></script>
+<script src={{asset("assets/plugins/jquery-migrate.min.js")}} type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 
 <!-- BEGIN PAGE LEVEL JAVASCRIPTS (REQUIRED ONLY FOR CURRENT PAGE) -->
-<script src="assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
-<script src="assets/plugins/gmaps/gmaps.js" type="text/javascript"></script>
-<script src="assets/pages/scripts/contact-us.js" type="text/javascript"></script>
+<script src={{asset("assets/plugins/uniform/jquery.uniform.min.js")}} type="text/javascript"></script>
+<script src={{asset("http://maps.google.com/maps/api/js?sensor=true")}} type="text/javascript"></script>
+<script src={{asset("assets/plugins/gmaps/gmaps.js")}} type="text/javascript"></script>
+<script src={{asset("assets/pages/scripts/contact-us.js")}} type="text/javascript"></script>
 
 <!-- <script src="assets/corporate/scripts/layout.js" type="text/javascript"></script> -->
 <script type="text/javascript">
