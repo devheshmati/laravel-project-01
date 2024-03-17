@@ -1,105 +1,179 @@
 @extends('index')
 
 @section('content')
-<div class="main">
-    <div class="container">
-        <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="">Pages</a></li>
-            <li class="active">Contact</li>
-        </ul>
-        <!-- BEGIN SIDEBAR & CONTENT -->
-        <div class="row margin-bottom-40">
-            <!-- BEGIN SIDEBAR -->
-            <div class="sidebar col-md-3 col-sm-3">
-                <ul class="list-group margin-bottom-25 sidebar-menu">
-                    <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Login/Register</a></li>
-                    <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Restore Password</a></li>
-                    <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> My account</a></li>
-                    <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Address book</a></li>
-                    <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Wish list</a></li>
-                    <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Returns</a></li>
-                    <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Newsletter</a></li>
-                </ul>
+<!-- Cart -->
+<div class="wrap-header-cart js-panel-cart">
+    <div class="s-full js-hide-cart"></div>
 
-                <h2>Our Contacts</h2>
-                <address>
-                    35, Lorem Lis Street, Park Ave<br>
-                    California, US<br>
-                    <abbr title="Phone">P:</abbr> 300 323 3456<br>
-                </address>
-                <address>
-                    <strong>Email</strong><br>
-                    <a href="mailto:info@metronic.com">info@metronic.com</a><br>
-                    <a href="mailto:support@metronic.com">support@metronic.com</a>
-                </address>
-                <ul class="social-icons margin-bottom-10">
-                    <li><a href="javascript:;" data-original-title="facebook" class="facebook"></a></li>
-                    <li><a href="javascript:;" data-original-title="github" class="github"></a></li>
-                    <li><a href="javascript:;" data-original-title="Goole Plus" class="googleplus"></a></li>
-                    <li><a href="javascript:;" data-original-title="linkedin" class="linkedin"></a></li>
-                    <li><a href="javascript:;" data-original-title="rss" class="rss"></a></li>
-                </ul>
+    <div class="header-cart flex-col-l p-l-65 p-r-25">
+        <div class="header-cart-title flex-w flex-sb-m p-b-8">
+            <span class="mtext-103 cl2">
+                Your Cart
+            </span>
+
+            <div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
+                <i class="zmdi zmdi-close"></i>
             </div>
-            <!-- END SIDEBAR -->
+        </div>
 
-            <!-- BEGIN CONTENT -->
-            <div class="col-md-9 col-sm-9">
-                <h1>Contact</h1>
-                <div class="content-page">
-                    <div id="map" class="gmaps margin-bottom-40" style="height:400px;"></div>
+        <div class="header-cart-content flex-w js-pscroll">
+            <ul class="header-cart-wrapitem w-full">
+                <li class="header-cart-item flex-w flex-t m-b-12">
+                    <div class="header-cart-item-img">
+                        <img src="{{asset('assets/images/item-cart-01.jpg')}}" alt="IMG">
+                    </div>
 
-                    <h2>Contact Form</h2>
-                    <p>Lorem ipsum dolor sit amet, Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat consectetuer adipiscing elit, sed diam nonummy nibh euismod tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                    <div class="header-cart-item-txt p-t-8">
+                        <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+                            White Shirt Pleat
+                        </a>
 
-                    <!-- BEGIN FORM-->
-                    <form action="#" class="default-form" role="form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email <span class="require">*</span></label>
-                            <input type="text" class="form-control" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" rows="8" id="message"></textarea>
-                        </div>
-                        <div class="padding-top-20">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                    </form>
-                    <!-- END FORM-->
+                        <span class="header-cart-item-info">
+                            1 x $19.00
+                        </span>
+                    </div>
+                </li>
+
+                <li class="header-cart-item flex-w flex-t m-b-12">
+                    <div class="header-cart-item-img">
+                        <img src="{{asset('assets/images/item-cart-02.jpg')}}" alt="IMG">
+                    </div>
+
+                    <div class="header-cart-item-txt p-t-8">
+                        <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+                            Converse All Star
+                        </a>
+
+                        <span class="header-cart-item-info">
+                            1 x $39.00
+                        </span>
+                    </div>
+                </li>
+
+                <li class="header-cart-item flex-w flex-t m-b-12">
+                    <div class="header-cart-item-img">
+                        <img src="{{asset('assets/images/item-cart-03.jpg')}}" alt="IMG">
+                    </div>
+
+                    <div class="header-cart-item-txt p-t-8">
+                        <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+                            Nixon Porter Leather
+                        </a>
+
+                        <span class="header-cart-item-info">
+                            1 x $17.00
+                        </span>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="w-full">
+                <div class="header-cart-total w-full p-tb-40">
+                    Total: $75.00
+                </div>
+
+                <div class="header-cart-buttons flex-w w-full">
+                    <a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+                        View Cart
+                    </a>
+
+                    <a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                        Check Out
+                    </a>
                 </div>
             </div>
-            <!-- END CONTENT -->
         </div>
-        <!-- END SIDEBAR & CONTENT -->
     </div>
 </div>
 
-<script src={{asset("assets/plugins/jquery.min.js")}} type="text/javascript"></script>
-<script src={{asset("assets/plugins/jquery-migrate.min.js")}} type="text/javascript"></script>
-<!-- END CORE PLUGINS -->
+<!-- Title page -->
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url({{asset('assets/images/bg-01.jpg')}});">
+    <h2 class="ltext-105 cl0 txt-center">
+        Contact
+    </h2>
+</section>
 
-<!-- BEGIN PAGE LEVEL JAVASCRIPTS (REQUIRED ONLY FOR CURRENT PAGE) -->
-<script src={{asset("assets/plugins/uniform/jquery.uniform.min.js")}} type="text/javascript"></script>
-<script src={{asset("http://maps.google.com/maps/api/js?sensor=true")}} type="text/javascript"></script>
-<script src={{asset("assets/plugins/gmaps/gmaps.js")}} type="text/javascript"></script>
-<script src={{asset("assets/pages/scripts/contact-us.js")}} type="text/javascript"></script>
+<!-- Content page -->
+<section class="bg0 p-t-104 p-b-116">
+    <div class="container">
+        <div class="flex-w flex-tr">
+            <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
+                <form>
+                    <h4 class="mtext-105 cl2 txt-center p-b-30">
+                        Send Us A Message
+                    </h4>
 
-<!-- <script src="assets/corporate/scripts/layout.js" type="text/javascript"></script> -->
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        Layout.init();
-        Layout.initOWL();
-        Layout.initTwitter();
-        Layout.initImageZoom();
-        Layout.initTouchspin();
-        Layout.initUniform();
-        ContactUs.init();
-    });
-</script>
+                    <div class="bor8 m-b-20 how-pos4-parent">
+                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Your Email Address">
+                        <img class="how-pos4 pointer-none" src="{{asset('assets/images/icons/icon-email.png')}}" alt="ICON">
+                    </div>
+
+                    <div class="bor8 m-b-30">
+                        <textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg" placeholder="How Can We Help?"></textarea>
+                    </div>
+
+                    <button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+                        Submit
+                    </button>
+                </form>
+            </div>
+
+            <div class="size-210 bor10 flex-w flex-col-m p-lr-93 p-tb-30 p-lr-15-lg w-full-md">
+                <div class="flex-w w-full p-b-42">
+                    <span class="fs-18 cl5 txt-center size-211">
+                        <span class="lnr lnr-map-marker"></span>
+                    </span>
+
+                    <div class="size-212 p-t-2">
+                        <span class="mtext-110 cl2">
+                            Address
+                        </span>
+
+                        <p class="stext-115 cl6 size-213 p-t-18">
+                            Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex-w w-full p-b-42">
+                    <span class="fs-18 cl5 txt-center size-211">
+                        <span class="lnr lnr-phone-handset"></span>
+                    </span>
+
+                    <div class="size-212 p-t-2">
+                        <span class="mtext-110 cl2">
+                            Lets Talk
+                        </span>
+
+                        <p class="stext-115 cl1 size-213 p-t-18">
+                            +1 800 1236879
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex-w w-full">
+                    <span class="fs-18 cl5 txt-center size-211">
+                        <span class="lnr lnr-envelope"></span>
+                    </span>
+
+                    <div class="size-212 p-t-2">
+                        <span class="mtext-110 cl2">
+                            Sale Support
+                        </span>
+
+                        <p class="stext-115 cl1 size-213 p-t-18">
+                            contact@example.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map -->
+<div class="map">
+    <div class="size-303" id="google_map" data-map-x="40.691446" data-map-y="-73.886787" data-pin="{{asset('assets/images/icons/pin.png')}}" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
+</div>
 
 @endsection

@@ -1,62 +1,162 @@
 @extends('index')
 
 @section('content')
-    <div class="main">
-      <div class="container">
-        <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="">Store</a></li>
-            <li class="active">Terms &amp; Conditions</li>
-        </ul>
-        <!-- BEGIN SIDEBAR & CONTENT -->
-        <div class="row margin-bottom-40">
-          <!-- BEGIN SIDEBAR -->
-          <div class="sidebar col-md-3 col-sm-3">
-            <ul class="list-group margin-bottom-25 sidebar-menu">
-              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Login/Register</a></li>
-              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Restore Password</a></li>
-              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> My account</a></li>
-              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Address book</a></li>
-              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Wish list</a></li>
-              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Returns</a></li>
-              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Newsletter</a></li>
-            </ul>
-          </div>
-          <!-- END SIDEBAR -->
+<!-- Cart -->
+<div class="wrap-header-cart js-panel-cart">
+    <div class="s-full js-hide-cart"></div>
 
-          <!-- BEGIN CONTENT -->
-          <div class="col-md-9 col-sm-9">
-            <h1>About us</h1>
-            <div class="content-page">
-              <p><img src={{asset("assets/pages/img/img1.jpg")}} alt="About us" class="img-responsive"></p>
+    <div class="header-cart flex-col-l p-l-65 p-r-25">
+        <div class="header-cart-title flex-w flex-sb-m p-b-8">
+            <span class="mtext-103 cl2">
+                Your Cart
+            </span>
 
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-
-              <h2>Lorem ipsum dolor sit amet</h2>
-
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. </p>
-
-              <h3>Investigationes demonstraverunt</h3>
-              <ul>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Claritas est etiam processus dynamicus</li>
-                <li>Duis autem vel eum iriure dolor</li>
-                <li>Eodem modo typi</li>
-              </ul>
-
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-
-              <h2>Nam liber tempor cum soluta nobis</h2>
-
-              <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-
+            <div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
+                <i class="zmdi zmdi-close"></i>
             </div>
-          </div>
-          <!-- END CONTENT -->
         </div>
-        <!-- END SIDEBAR & CONTENT -->
-      </div>
+
+        <div class="header-cart-content flex-w js-pscroll">
+            <ul class="header-cart-wrapitem w-full">
+                <li class="header-cart-item flex-w flex-t m-b-12">
+                    <div class="header-cart-item-img">
+                        <img src="{{asset('assets/images/item-cart-01.jpg')}}" alt="IMG">
+                    </div>
+
+                    <div class="header-cart-item-txt p-t-8">
+                        <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+                            White Shirt Pleat
+                        </a>
+
+                        <span class="header-cart-item-info">
+                            1 x $19.00
+                        </span>
+                    </div>
+                </li>
+
+                <li class="header-cart-item flex-w flex-t m-b-12">
+                    <div class="header-cart-item-img">
+                        <img src="{{asset('assets/images/item-cart-02.jpg')}}" alt="IMG">
+                    </div>
+
+                    <div class="header-cart-item-txt p-t-8">
+                        <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+                            Converse All Star
+                        </a>
+
+                        <span class="header-cart-item-info">
+                            1 x $39.00
+                        </span>
+                    </div>
+                </li>
+
+                <li class="header-cart-item flex-w flex-t m-b-12">
+                    <div class="header-cart-item-img">
+                        <img src="{{asset('assets/images/item-cart-03.jpg')}}" alt="IMG">
+                    </div>
+
+                    <div class="header-cart-item-txt p-t-8">
+                        <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+                            Nixon Porter Leather
+                        </a>
+
+                        <span class="header-cart-item-info">
+                            1 x $17.00
+                        </span>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="w-full">
+                <div class="header-cart-total w-full p-tb-40">
+                    Total: $75.00
+                </div>
+
+                <div class="header-cart-buttons flex-w w-full">
+                    <a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+                        View Cart
+                    </a>
+
+                    <a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                        Check Out
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+<!-- Title page -->
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('{{asset('assets/images/bg-01.jpg')}}');">
+    <h2 class="ltext-105 cl0 txt-center">
+        About
+    </h2>
+</section>
+
+<!-- Content page -->
+<section class="bg0 p-t-75 p-b-120">
+    <div class="container">
+        <div class="row p-b-148">
+            <div class="col-md-7 col-lg-8">
+                <div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
+                    <h3 class="mtext-111 cl2 p-b-16">
+                        Our Story
+                    </h3>
+
+                    <p class="stext-113 cl6 p-b-26">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat consequat enim, non auctor massa ultrices non. Morbi sed odio massa. Quisque at vehicula tellus, sed tincidunt augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas varius egestas diam, eu sodales metus scelerisque congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas gravida justo eu arcu egestas convallis. Nullam eu erat bibendum, tempus ipsum eget, dictum enim. Donec non neque ut enim dapibus tincidunt vitae nec augue. Suspendisse potenti. Proin ut est diam. Donec condimentum euismod tortor, eget facilisis diam faucibus et. Morbi a tempor elit.
+                    </p>
+
+                    <p class="stext-113 cl6 p-b-26">
+                        Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula.
+                    </p>
+
+                    <p class="stext-113 cl6 p-b-26">
+                        Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-11 col-md-5 col-lg-4 m-lr-auto">
+                <div class="how-bor1 ">
+                    <div class="hov-img0">
+                        <img src="{{asset('assets/images/about-01.jpg')}}" alt="IMG">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="order-md-2 col-md-7 col-lg-8 p-b-30">
+                <div class="p-t-7 p-l-85 p-l-15-lg p-l-0-md">
+                    <h3 class="mtext-111 cl2 p-b-16">
+                        Our Mission
+                    </h3>
+
+                    <p class="stext-113 cl6 p-b-26">
+                        Mauris non lacinia magna. Sed nec lobortis dolor. Vestibulum rhoncus dignissim risus, sed consectetur erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam maximus mauris sit amet odio convallis, in pharetra magna gravida. Praesent sed nunc fermentum mi molestie tempor. Morbi vitae viverra odio. Pellentesque ac velit egestas, luctus arcu non, laoreet mauris. Sed in ipsum tempor, consequat odio in, porttitor ante. Ut mauris ligula, volutpat in sodales in, porta non odio. Pellentesque tempor urna vitae mi vestibulum, nec venenatis nulla lobortis. Proin at gravida ante. Mauris auctor purus at lacus maximus euismod. Pellentesque vulputate massa ut nisl hendrerit, eget elementum libero iaculis.
+                    </p>
+
+                    <div class="bor16 p-l-29 p-b-9 m-t-22">
+                        <p class="stext-114 cl6 p-r-40 p-b-11">
+                            Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while.
+                        </p>
+
+                        <span class="stext-111 cl8">
+                            - Steve Job’s
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-md-1 col-11 col-md-5 col-lg-4 m-lr-auto p-b-30">
+                <div class="how-bor2">
+                    <div class="hov-img0">
+                        <img src="{{asset('assets/images/about-02.jpg')}}" alt="IMG">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection

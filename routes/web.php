@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\pages\HomeController;
+use App\Http\Controllers\pages\AboutController;
+use App\Http\Controllers\pages\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,19 +17,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get(
-    '/', function () {
-        return view('pages.home');
-    }
+    '/',
+    [HomeController::class, 'index']
+);
+
+Route::post(
+    '/',
+    [HomeController::class, 'store']
 );
 
 Route::get(
-    '/about', function () {
-        return view('pages.about');
-    }
+    '/about',
+    AboutController::class
 );
 
 Route::get(
-    '/contact', function () {
-        return view('pages.contact');
-    }
+    '/contact',
+    [ContactController::class, 'index']
+);
+
+Route::post(
+    '/contact',
+    [ContactController::class, 'store']
 );
