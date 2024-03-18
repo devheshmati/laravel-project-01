@@ -670,6 +670,10 @@ pre code {
   padding-left: 15px;
 }
 
+.min-height-100vh {
+    min-height: 100vh;
+}
+
 .col {
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
@@ -5290,6 +5294,14 @@ a.bg-light:focus, a.bg-light:hover {
   background-color: #343a40 !important;
 }
 
+.bg-gray-400 {
+  background-color: #ced4da;
+}
+
+.bg-gray-500 {
+  background-color: #adb5bd;
+}
+
 a.bg-dark:focus, a.bg-dark:hover {
   background-color: #1d2124 !important;
 }
@@ -6577,6 +6589,36 @@ a.bg-dark:focus, a.bg-dark:hover {
 .my-5 {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important;
+}
+
+.m-6 {
+  margin: 5rem !important;
+}
+
+.mt-6 {
+  margin-top: 5rem !important;
+}
+
+.mr-6 {
+  margin-right: 5rem !important;
+}
+
+.mb-6 {
+  margin-bottom: 5rem !important;
+}
+
+.ml-6 {
+  margin-left: 5rem !important;
+}
+
+.mx-6 {
+  margin-right: 5rem !important;
+  margin-left: 5rem !important;
+}
+
+.my-6 {
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
 }
 
 .p-0 {
