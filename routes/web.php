@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pages\HomeController;
 use App\Http\Controllers\pages\AboutController;
 use App\Http\Controllers\pages\ContactController;
-use App\Http\Controllers\pages\ShopController;
+use App\Http\Controllers\products\ShopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,17 +28,6 @@ Route::post(
     [HomeController::class, 'store']
 );
 
-// shop
-Route::get(
-    '/shop',
-    [ShopController::class, 'index']
-)->name('shop');
-
-Route::post(
-    '/shop',
-    [ShopController::class, 'store']
-);
-
 // About
 Route::get(
     '/about',
@@ -55,3 +44,19 @@ Route::post(
     '/contact',
     [ContactController::class, 'store']
 );
+
+// shop
+Route::get(
+    '/shop',
+    [ShopController::class, 'index']
+)->name('shop');
+
+Route::post(
+    '/shop',
+    [ShopController::class, 'store']
+);
+
+// Product Detail
+Route::get('/product-detail/{$slug}', [ShopController::class, 'show']);
+
+// auth: login, register, forget_password
