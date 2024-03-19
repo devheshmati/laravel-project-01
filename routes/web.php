@@ -5,6 +5,9 @@ use App\Http\Controllers\pages\HomeController;
 use App\Http\Controllers\pages\AboutController;
 use App\Http\Controllers\pages\ContactController;
 use App\Http\Controllers\products\ShopController;
+use App\Http\Controllers\auth\LoginController;
+use App\Http\Controllers\auth\RegisterController;
+use App\Http\Controllers\auth\ForgetPasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,3 +63,6 @@ Route::post(
 Route::get('/product-detail/{$slug}', [ShopController::class, 'show']);
 
 // auth: login, register, forget_password
+Route::get('/auth/login', [LoginController::class, 'index'])->name('login');
+Route::get('/auth/register', [RegisterController::class, 'index'])->name('register');
+Route::get('/auth/forget_password', [ForgetPasswordController::class, 'index'])->name('forget_password');
