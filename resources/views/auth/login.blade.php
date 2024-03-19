@@ -27,6 +27,7 @@
                     </div>
                 </form>
             </div>
+
             <div class="col-md-6 d-flex justify-content-center align-items-center">
                 <img src="{{asset('assets/images/login.png')}}" alt="Login illustrator image" style="max-height: 500px;" class="object-fit-contain w-100" />
             </div>
