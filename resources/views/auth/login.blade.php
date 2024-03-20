@@ -4,7 +4,7 @@
 <!--Content should be here-->
 <main>
     <section class="container">
-        <div class="row">
+        <div class="row min-height-100vh">
             <div class="col-md-6 d-flex justify-content-center align-items-center">
                 <form class="p-5 shadow">
                     <div class="mb-4">
@@ -23,7 +23,7 @@
                         <a class="btn-link" href="{{route('forget_password')}}">Forget password.</a>
                     </div>
                     <div>
-                        <a class="btn btn-secondary" href="{{route('forget_password')}}">Return to Home.</a>
+                        <a class="btn btn-secondary" href="{{route('home')}}">Return to Home.</a>
                     </div>
                 </form>
             </div>
