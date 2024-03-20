@@ -63,6 +63,8 @@ Route::post(
 Route::get('/product-detail/{$slug}', [ShopController::class, 'show']);
 
 // auth: login, register, forget_password
-Route::get('/auth/login', [LoginController::class, 'index'])->name('login');
-Route::get('/auth/register', [RegisterController::class, 'index'])->name('register');
-Route::get('/auth/forget_password', [ForgetPasswordController::class, 'index'])->name('forget_password');
+Route::prefix('auth')->group(function() {
+    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::get('/register', [RegisterController::class, 'index'])->name('register');
+    Route::get('/forget_password', [ForgetPasswordController::class, 'index'])->name('forget_password');
+});
