@@ -60,7 +60,7 @@ Route::post(
 );
 
 // Product Detail
-Route::get('/product-detail/{$slug}', [ShopController::class, 'show']);
+Route::get('/product-detail/{slug}', [ShopController::class, 'show']);
 
 // auth: login, register, forget_password
 Route::prefix('auth')->group(function() {

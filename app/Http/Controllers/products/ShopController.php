@@ -18,7 +18,7 @@ class ShopController extends Controller
     }
     public function show($slug)
     {
-        // product detail should be here
+
     }
 
     public function update(Request $request, $id)

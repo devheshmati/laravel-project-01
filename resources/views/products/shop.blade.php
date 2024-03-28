@@ -11,6 +11,7 @@
         </div>
 
         <div class="flex-w flex-sb-m p-b-52">
+            <!--filter left-->
             <div class="flex-w flex-l-m filter-tope-group m-tb-10">
                 <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
                     All Products
@@ -37,6 +38,7 @@
                 </button>
             </div>
 
+            <!--filter right-->
             <div class="flex-w flex-c-m m-tb-10">
                 <div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
                     <i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"></i>
@@ -254,7 +256,7 @@
 
         <div class="row isotope-grid">
             <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
-                <!-- Block2 -->
+                <!-- Product Modal -->
                 <div class="block2">
                     <div class="block2-pic hov-img0">
                         <img src="{{asset('assets/images/product-01.jpg')}}" alt="IMG-PRODUCT">
